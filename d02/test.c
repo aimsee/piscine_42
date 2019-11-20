@@ -6,26 +6,29 @@ int	ft_putchar(char c)
 	return (0);
 }
 
-int	ft_print_comb(char n1, char n2, char n3)
+int	ft_print_comb(char n1, char n2, char n3, char n4)
 {
 	n1--;
 	while (++n1 <= '9')
 	{
-		n2 = n1;
+		n2 = '0';
 		while (++n2 <= '9')
 		{
-			n3 = n2 + 1;
-			while (n3 <= '9')
+			n3 = '0';
+			while (++n3 <= '9')
 			{
-				ft_putchar(n1);
-				ft_putchar(n2);
-				ft_putchar(n3);
-				if (n1 != '7' || n2 != '8' || n3 != '9')
+				n4 = '0';
+				while (n4 <= '9')
 				{
+					ft_putchar(n1);
+					ft_putchar(n2);
+					ft_putchar(' ');
+					ft_putchar(n3);
+					ft_putchar(n4);
 					ft_putchar(',');
 					ft_putchar(' ');
+					n4++;
 				}
-				n3++;
 			}
 		}
 	}
@@ -33,6 +36,6 @@ int	ft_print_comb(char n1, char n2, char n3)
 
 int	main()
 {
-	ft_print_comb('0', '0', '0');
+	ft_print_comb('0', '0', '0', '0');
 	return (0);
 }
