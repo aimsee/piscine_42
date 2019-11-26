@@ -1,21 +1,25 @@
-#include <unistd.h>
-
-int	ft_putchar(char c);
-{
-	write(1, &c, 1);
-	return (0);
-}
-
-int	ft_ft(int *nbr);
-{
-	*nbr = 42;
-}
-
-int	main(void);
-{
-	int	nbr;
-
-	nbr = 42;
-	ft_ft(nbr);
-	return (0);
+// Program to implement atoi() in C 
+#include <stdio.h> 
+  
+// A simple atoi() function 
+int myAtoi(char* str) 
+{ 
+    int res = 0; // Initialize result 
+  
+    // Iterate through all characters of input string and 
+    // update result 
+    for (int i = 0; str[i] != '\0'; ++i) 
+        res = res * 10 + str[i] - '0'; 
+  
+    // return result. 
+    return res; 
+} 
+  
+// Driver program to test above function 
+int main() 
+{ 
+    char str[] = "toto"; 
+    int val = myAtoi(str); 
+    printf("%d ", val); 
+    return 0; 
 }
