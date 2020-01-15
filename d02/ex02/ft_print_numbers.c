@@ -1,16 +1,13 @@
-
-# include <unistd.h>
-
-int	ft_putchar(char c)
+int	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
-	int numbers;
+	char	nbr;
 
-	numbers = 0;
-	while (numbers <= 9)
+	nbr = 48;
+	while(nbr <= 57)
 	{
-		ft_putchar(numbers);
-		numbers = numbers +1;
+		ft_putchar(nbr);
+		nbr++;
 	}
 }

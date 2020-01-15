@@ -1,22 +1,22 @@
-char	*ft_strrev(char *str);
+char	*ft_strrev(char *str)
 {
+	int	count;
 	int	i;
-	int	j;
-	char	tmp;
 
+	count = 0;
 	i = 0;
-	while (str[i] != '\0')
+	while (str[count])
 	{
+		count++;
+	}
+	char	temp[count];
+	while (count <= 0)
+	{
+		temp[i] = str[count];
 		i++;
+		count--;
 	}
-	i = i - 1;
-	while (i >= 0)
-	{
-		tmp = srt[i];
-		srt[i] = srt[j];
-		srt[j] = tmp;
-		i--;
-		j++;
-	}
-	return (str)
+	str = temp;
+
+	return (str);
 }

@@ -1,4 +1,4 @@
-void ft_sort_integer_table(int *tab, int size);
+void	ft_sort_integer_table(int *tab, int size)
 {
 	int i;
 	int j;
@@ -6,15 +6,15 @@ void ft_sort_integer_table(int *tab, int size);
 
 	i = 0;
 	j = 1;
-	while (i <= size)
-	{
-		if (tab[j] <= tab[i])
+	while (i <= size) /* From 0 to size of tab */
+	{	
+		if (tab[j] <= tab[i]) /* Compare two int in the tab */
 		{
 			tmp = tab[i];
-			tab[i] = tab[j];
+			tab[i] = tab[j]; /* Replace the bigger int by the smaller int in the tab */
 			tab[j] = tmps;
-			j++;
+			j++; /* adding to j in order to compare i to all tab */
 		}
-		i++;
+		i++; /* adding to i in order to compare the next i to all tab */
 	}
 }

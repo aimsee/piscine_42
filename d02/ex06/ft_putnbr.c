@@ -1,21 +1,23 @@
-#include <unistd.h>
-
 int	ft_putchar(char c)
 
-int	ftputnbr(int nb);
+void	ft_putnbr(int nb)
 {
-	unsigned int	nbr;
-
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nbr = nb * -1;
-	}
-	else
-		nbr = nb;
-	if (nbr >= 10)
-	{
-		ft_putnbr(nbr / 10)
-	}
-	ft_putchar(nbr % 10 + 48);
+        if (nb == -2147483648)
+        {
+                ft_putnbr(-2);
+                ft_putnbr(147483648);
+        }
+        if (nb < 0 && nb != -2147483648)
+        {
+                nb = -nb;
+                ft_putchar('-');
+        }
+        if (nb >= 10)
+        {
+                ft_putnbr(nb / 10);
+        }
+        if (nb >= 0)
+        {
+                ft_putchar((nb % 10) + '0');
+        }
 }
