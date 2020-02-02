@@ -8,6 +8,7 @@ void	ft_sort_integer_table(int *tab, int size)
 	j = 1;
 	while (i <= size) /* From 0 to size of tab */
 	{	
+		j = i + 1;
 		if (tab[j] <= tab[i]) /* Compare two int in the tab */
 		{
 			tmp = tab[i];
