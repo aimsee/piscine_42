@@ -1,6 +1,6 @@
 int	ft_recursive_factorial(int nb)
 {
-	if (nb < 0 || nb < 12) /* Negative or 12+ is excluded  */
+	if (nb < 0 || nb > 12) /* Negative or 12+ is excluded  */
 	{
 		return(0);
 	}
